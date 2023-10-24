@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+}
+.page{
+    display: flex;
+    flex-direction: row; /* các phần tử con sẽ được xếp cạnh nhau từ trái sang phải, và nếu không đủ không gian, chúng sẽ xuống dòng mới. */
+    flex-wrap: wrap;/* được sử dụng trong mô hình Flexbox để điều chỉnh cách các phần tử con của một container xếp chồng lên nhau khi không đủ không gian trong một hàng. */
+}
+
+/* Note phần đầu */
+.top{
+    background-color: yellow;
+    padding: 20px;
+    width: 100%;
+}
+.header{
+    background-color:  #1abc9c;
+    text-align: center;
+    padding: 60px;
+    width: 100%;
+}
+.header p{
+    padding: 5px;
+}
+/* Thanh điều hướng */
+.nav_bar{
+    background-color:  #333; 
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    list-style-type: none;
+
+    width: 100%;
+}
+.nav_bar a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px;  
+    width: 100%;   
+    text-align: center;
+}
+.nav_bar a:hover{
+    background-color:#ddd;
+    color: black;
+    border-radius: 5px;
+}
+/* Phần thân */
+.container{
+    display: flex;
+    /* ko cho phép các phần tử tự động xuống dòng khi chạm tới ngưỡng tối đa của container */
+    /* flex-wrap: nowrap;     */
+    flex-direction: row;/* Để biểu diễn theo hàng*/
+}
+.row1{
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+
+}
+.row2{
+    flex:70%;
+    padding: 20px;
+}
+.fake_image{
+    background-color: #aaa;
+}
+/* Phần chân */
+.foot{
+    background: #ddd;
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+}
+@media screen and (max-width: 700px) {
+    .container, .nav_bar {   
+        /* flex-wrap: wrap;     */
+        flex-direction: column;
+    }
+  }
